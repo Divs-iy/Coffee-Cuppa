@@ -1,0 +1,145 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Coffee theme color palette */
+  --espresso: #2e1f18;
+  --cream: #d3bca5;
+  --gold: #f4a460;
+  --light-cream: #f5f1eb;
+  --dark-brown: #1a0f0a;
+
+  /* Updated theme colors for coffee aesthetic */
+  --background: var(--light-cream);
+  --foreground: var(--espresso);
+  --card: #ffffff;
+  --card-foreground: var(--espresso);
+  --popover: #ffffff;
+  --popover-foreground: var(--espresso);
+  --primary: var(--espresso);
+  --primary-foreground: var(--light-cream);
+  --secondary: var(--cream);
+  --secondary-foreground: var(--espresso);
+  --muted: var(--cream);
+  --muted-foreground: var(--espresso);
+  --accent: var(--gold);
+  --accent-foreground: var(--espresso);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: var(--cream);
+  --input: #ffffff;
+  --ring: var(--gold);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.75rem;
+  --sidebar: var(--light-cream);
+  --sidebar-foreground: var(--espresso);
+  --sidebar-primary: var(--espresso);
+  --sidebar-primary-foreground: var(--light-cream);
+  --sidebar-accent: var(--cream);
+  --sidebar-accent-foreground: var(--espresso);
+  --sidebar-border: var(--cream);
+  --sidebar-ring: var(--gold);
+}
+
+.dark {
+  /* Dark theme for coffee aesthetic */
+  --background: var(--dark-brown);
+  --foreground: var(--light-cream);
+  --card: var(--espresso);
+  --card-foreground: var(--light-cream);
+  --popover: var(--espresso);
+  --popover-foreground: var(--light-cream);
+  --primary: var(--gold);
+  --primary-foreground: var(--espresso);
+  --secondary: var(--espresso);
+  --secondary-foreground: var(--light-cream);
+  --muted: var(--espresso);
+  --muted-foreground: var(--cream);
+  --accent: var(--gold);
+  --accent-foreground: var(--espresso);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: var(--espresso);
+  --input: var(--espresso);
+  --ring: var(--gold);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: var(--espresso);
+  --sidebar-foreground: var(--light-cream);
+  --sidebar-primary: var(--gold);
+  --sidebar-primary-foreground: var(--espresso);
+  --sidebar-accent: var(--espresso);
+  --sidebar-accent-foreground: var(--light-cream);
+  --sidebar-border: var(--espresso);
+  --sidebar-ring: var(--gold);
+}
+
+@theme inline {
+  /* Updated font variables for coffee theme */
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Coffee theme typography styles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
